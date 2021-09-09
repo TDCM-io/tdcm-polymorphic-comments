@@ -1,0 +1,7 @@
+<%= form_with(model: [@commentable, comment]) do |form| %>
+  <% comment.errors.each do |e| %>
+    <%= e.full_message %>
+  <% end %>
+  <%= form.text_area :body %>
+  <%= form.submit %>
+<% end %>
